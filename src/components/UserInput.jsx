@@ -1,22 +1,7 @@
 import { useState } from "react";
 
-const UserInput = () => {
-  const [InvestmentParams, SetInvestmentParams] = useState({
-    initialInvestment: null,
-    annualInvestment: null,
-    expectedReturn: null,
-    duration: null,
-  });
+const UserInput = ({InvestmentParams,handleChange}) => {
 
-  const handleChange = (value,key) => {
-    SetInvestmentParams((prevParams)=>{
-      return ({
-        ...prevParams,
-        [key]:value
-      }
-      )
-    })
-  }
   console.log(InvestmentParams)
   return (
     <div id="user-input">
